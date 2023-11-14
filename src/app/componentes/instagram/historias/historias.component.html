@@ -1,0 +1,8 @@
+<div class="rounded-full w-20 h-24 flex flex-wrap relative mb-1">
+    <div class="w-full bg-gray-800 absolute z-10 rounded-2xl text-[10px] px-[1px]">
+        <p class=" text-white text-center">{{historia.nota}}</p>
+    </div>
+    <img [src]="historia.url" [alt]="historia.nombre" class="rounded-full w-20 h-20 absolute bottom-0">
+    <div class=" w-4 h-4 rounded-full bg-green-500 absolute bottom-1 right-1" *ngIf="historia.activo"></div>
+</div> 
+<p class="text-center text-white text-[10px]">{{historia.nombre}}</p>

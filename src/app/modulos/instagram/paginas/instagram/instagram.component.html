@@ -1,0 +1,42 @@
+<main class="bg-black px-4 pb-2 h-[100vh] text-white cursor-pointer overflow-auto">
+    <div class="sticky top-0 pt-2 bg-black">
+        <div class="flex justify-between mb-4">
+            <div class="mt-2 flex gap-6">
+                <img src="assets/images/back.png" alt="back" class="w-6">
+                <div class="flex gap-1">
+                    <p class="font-bold text-lg">felipe_paredes_0306</p>
+                    <div class="flex items-end">
+                        <mat-icon class="m-0 cursor-pointer">expand_more</mat-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-end">
+                <div class="flex gap-4">
+                    <img src="assets/images/add.png" alt="back" class="w-7">
+                    <img src="assets/images/edit.png" alt="back" class="w-7">
+                </div>
+            </div>
+        </div>
+        <input type="text" class="w-full bg-gray-800 border-none outline-none rounded-lg 
+        py-2 pl-3 placeholder-gray-400 mb-4" placeholder="Buscar">
+        <div class="flex gap-3 mb-4">
+            <app-historias *ngFor="let historia of historias" [historias-url]="historia"></app-historias>
+        </div>
+        <div class="grid grid-cols-3 gap-3 mb-5">
+            <div class="bg-white rounded-lg py-2 flex gap-1 justify-center items-center">
+                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <span class="text-black text-sm font-medium">Mensajes</span>
+            </div>
+            <div class="bg-gray-800 rounded-lg py-2 flex gap-1 justify-center items-center">
+                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <span class="text-white text-sm font-medium">Canales</span>
+            </div>
+            <div class="bg-gray-800 rounded-lg py-2">
+                <p class="text-white text-sm font-medium text-center">Solicitudes</p>
+            </div>
+        </div>
+    </div>
+    <div class="mb-4" *ngFor="let chat of chats; let i = index" (click)="verMensaje(chat)">
+        <app-chat  [chats-instagram]="chat"></app-chat>
+    </div>
+</main>
