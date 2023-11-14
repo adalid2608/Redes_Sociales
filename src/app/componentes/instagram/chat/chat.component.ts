@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
@@ -13,6 +14,5 @@ export class ChatComponent {
 
   ngOnchanges(changes: any): void{
     console.log(this.chats);
-    
   }
 }
