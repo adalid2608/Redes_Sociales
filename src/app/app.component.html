@@ -1,2 +1,3 @@
-<app-menu></app-menu>
+<app-menu (mostrarOcultarInstagram)="mostrarRedInstagram()" (mostrarOcultarMessenger)="mostrarRedSocialMessenger()"></app-menu>
+<app-instagram *ngIf="mostrarInstagram"></app-instagram>
 <router-outlet></router-outlet>
