@@ -1,0 +1,24 @@
+<!-- contenedor general de la tarjeta -->
+<div class="bg-slate-900 w-full h-24 flex items-center" (click)="onOpenMessage()">
+    <!-- contenedor de la imagen -->
+    <div class="mx-4">
+        <img src={{imagenContacto}} alt="imagen de  contacto" class="w-12 h-12 rounded-full bg-white">    
+    </div>
+    <!-- contenedor del nombre de contacto y el mensaje -->
+    <div class="w-2/3 flex justify-center flex-col">
+        <span class="text-white">{{nombreContacto}}</span>
+        <div class="flex">
+            <div class="h-2">
+                <mat-icon aria-hidden="false" fontIcon="done_all" class="text-blue-500 text-[14px]  h-4 w-4" *ngIf="estatusMensaje == true && numMensajes == 0"></mat-icon>
+                <mat-icon aria-hidden="false" fontIcon="done_all" class="text-gray-500 text-[14px]  h-4 w-4" *ngIf="estatusMensaje == false && numMensajes == 0"></mat-icon>
+                <mat-icon aria-hidden="false" fontIcon="done" class="text-gray-500 text-[14px]" *ngIf="estatusMensaje == null && numMensajes == 0"></mat-icon>
+            </div>
+            <p class="text-gray-400 text-xs">{{mensajeContacto}}</p>
+        </div>
+    </div>
+    <!-- conenedor del numero de mansajes y la fecha -->
+    <div class="flex justify-center items-center flex-col gap-1 mr-3">
+        <p class="text-gray-400 text-xs">{{fechaMensaje}}</p>
+        <span class="bg-green-300 rounded-full text-center text-sm w-5 h-5" *ngIf="numMensajes >=1">{{numMensajes}}</span>
+    </div>
+</div>

@@ -9,6 +9,8 @@ export class AppComponent {
   title = 'tarea-equipo';
   mostrarInstagram : boolean = true
   mostrarMessenger : boolean = false
+  mostrarMesseger : boolean = false
+  mostrarWhatsApp : boolean = false
   
   constructor(){}
 
@@ -16,6 +18,8 @@ export class AppComponent {
   mostrarRedInstagram(){
     this.mostrarInstagram = true
     this.mostrarMessenger = false
+    this.mostrarMesseger = false
+    this.mostrarWhatsApp = false
   }
 
   mostrarRedSocialMessenger(){
