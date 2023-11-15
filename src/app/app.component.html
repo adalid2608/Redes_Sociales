@@ -1,5 +1,7 @@
-<app-menu (mostrarOcultarInstagram)="mostrarRedInstagram()" (mostrarOcultarMessenger)="mostrarRedSocialMessenger()" (mostrarOcultarWhatsApp)="mostrarRedSocialWhatsApp()"></app-menu>
+<app-menu (mostrarOcultarInstagram)="mostrarRedInstagram()" (mostrarOcultarMessenger)="mostrarRedSocialMessenger()" 
+ (mostrarOcultarTikTok)="mostrarRedSocialTikTok()" (mostrarOcultarWhatsApp)="mostrarRedSocialWhatsApp()"></app-menu>
     <app-instagram *ngIf="mostrarInstagram"></app-instagram>
     <app-messenger *ngIf="mostrarMessenger"></app-messenger>
     <app-whats-app *ngIf="mostrarWhatsApp"></app-whats-app>
+    <app-tik-tok *ngIf="mostrarTikTok"></app-tik-tok>
 <router-outlet></router-outlet>
