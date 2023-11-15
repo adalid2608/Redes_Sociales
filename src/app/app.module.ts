@@ -1,3 +1,5 @@
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +17,11 @@ import {MatInputModule} from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MenuComponent } from "./componentes/menu/menu.component";
+import { MessengerBottomBarComponent } from './componentes/messenger/messenger-bottom-bar/messenger-bottom-bar.component';
+import { MessengerChatsComponent } from './componentes/messenger/messenger-chats/messenger-chats.component';
+import { MessengerComponent } from './modulos/messenger/pages/messenger/messenger.component';
+import { MessengerHeaderComponent } from './componentes/messenger/messenger-header/messenger-header.component';
+import { MessengerHistoriesComponent } from './componentes/messenger/messenger-histories/messenger-histories.component';
 import { NgModule } from '@angular/core';
 import { StoryTikTokComponent } from './componentes/Tik-Tok/story-tik-tok/story-tik-tok.component';
 import { TikTokComponent } from './modulos/Tik-Tok/Pages/tik-tok/tik-tok.component';
@@ -24,6 +31,7 @@ import { WhatsAppComponent } from './modulos/whatsApp/paginas/whats-app/whats-ap
     declarations: [
         AppComponent,
         InstagramComponent,
+        MessengerComponent,
         WhatsAppComponent,
         TikTokComponent,
     ],
@@ -44,9 +52,15 @@ import { WhatsAppComponent } from './modulos/whatsApp/paginas/whats-app/whats-ap
         MatFormFieldModule,
         HistoriasComponent,
         ChatComponent,
+        MessengerBottomBarComponent,
+        MessengerHeaderComponent,
+        MessengerHistoriesComponent,
+        MessengerChatsComponent,
         ChatWhatsAppComponent,
         ChatTikTokComponent,
         StoryTikTokComponent
+        
+        
         
     ]
 })

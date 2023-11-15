@@ -1,0 +1,25 @@
+<app-messenger-header></app-messenger-header>
+<main class="h-full w-full  flex flex-col items-center overflow-y-auto">
+    <!-- Search Bar -->
+    <form class="w-full flex-none mb-2 px-3">
+        <div class="relative">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <mat-icon class="text-gray-900/30">search</mat-icon>
+            </div>
+            <input type="search" id="search"
+                class="w-full flex items-center p-2 pl-10 text-base text-gray-900 font-normal border rounded-full focus:outline-none"
+                placeholder="Search">
+        </div>
+    </form>
+    <!-- Histories -->
+    <section class="w-full flex flex-none overflow-x-auto gap-4 h-auto px-3">
+        <app-messenger-histories *ngFor="let chat of chats, let index" [history]="chat.history" (actionSeenHistory)="handleSeenHistory($event)" [status]="chat.status" [image]="chat.image" [name]="chat.name"></app-messenger-histories>
+    </section>
+    <!-- Chats -->
+    <section class=" w-full grow  flex my-2 flex-col gap-3 px-3">
+        <app-messenger-chats *ngFor="let chat of chats" [name]="chat.name" [history]="chat.history" [image]="chat.image" [seen]="chat.seen" (actionSeen)="handleSeen($event)" (actionSeenHistory)="handleSeenHistory($event)" [status]="chat.status" [last-message]="chat.lastMessage"></app-messenger-chats>
+    </section>
+</main>
+<div class="fixed bottom-0 w-full mt-5">
+    <app-messenger-bottom-bar></app-messenger-bottom-bar>
+</div>
