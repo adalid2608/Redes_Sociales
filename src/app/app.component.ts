@@ -8,19 +8,19 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'tarea-equipo';
   mostrarInstagram : boolean = true
-  mostrarMesseger : boolean = false
+  mostrarMessenger : boolean = false
   
   constructor(){}
 
 
   mostrarRedInstagram(){
     this.mostrarInstagram = true
-    this.mostrarMesseger = false
+    this.mostrarMessenger = false
   }
 
   mostrarRedSocialMessenger(){
     this.mostrarInstagram = false
-    this.mostrarMesseger = true
+    this.mostrarMessenger = true
   }
 
 }
