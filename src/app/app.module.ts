@@ -1,3 +1,5 @@
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,7 +14,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MenuComponent } from "./componentes/menu/menu.component";
 import { MessengerBottomBarComponent } from './componentes/messenger/messenger-bottom-bar/messenger-bottom-bar.component';
@@ -52,6 +53,7 @@ import { WhatsAppComponent } from './modulos/whatsApp/paginas/whats-app/whats-ap
         MessengerHistoriesComponent,
         MessengerChatsComponent,
         ChatWhatsAppComponent,
+        
         
     ]
 })

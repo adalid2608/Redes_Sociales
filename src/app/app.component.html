@@ -1,4 +1,5 @@
 <app-menu (mostrarOcultarInstagram)="mostrarRedInstagram()" (mostrarOcultarMessenger)="mostrarRedSocialMessenger()" (mostrarOcultarWhatsApp)="mostrarRedSocialWhatsApp()"></app-menu>
     <app-instagram *ngIf="mostrarInstagram"></app-instagram>
+    <app-messenger *ngIf="mostrarMessenger"></app-messenger>
     <app-whats-app *ngIf="mostrarWhatsApp"></app-whats-app>
 <router-outlet></router-outlet>

@@ -13,10 +13,6 @@ import { messengerIUsuario } from 'src/app/core/interfaces/messenger-usuario.int
   styleUrls: ['./messenger.component.scss'],
 })
 export class MessengerComponent {
-  // Injectar el snackbar
-  constructor(private snackBar: MatSnackBar) {
-    
-  }
 
   chats: messengerIUsuario[] = [
     {
@@ -152,14 +148,16 @@ export class MessengerComponent {
   ];
 
   handleSeen(event: messengerIUsuario) {
-    this.snackBar.open(`Mensaje leído de ${event.name}`, 'cerrar', {
-      duration: 5 * 1000,
-    });
+    // this.snackBar.open(`Mensaje leído de ${event.name}`, 'cerrar', {
+    //   duration: 5 * 1000,
+    // });
+    alert(`Mensaje leído de ${event.name}`)
   }
 
   handleSeenHistory(event: any) {
-    this.snackBar.open(`Historia vista de ${event.name}.`, 'cerrar', {
-      duration: 5 * 1000,
-    });
+    // this.snackBar.open(`Historia vista de ${event.name}.`, 'cerrar', {
+    //   duration: 5 * 1000,
+    // });
+    alert(`Historia vista de ${event.name}.`)
   }
 }
