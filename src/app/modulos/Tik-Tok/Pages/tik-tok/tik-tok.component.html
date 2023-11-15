@@ -1,0 +1,6 @@
+<div class="flex overflow-x-auto">
+    <app-story-tik-tok *ngFor="let stories of story" [userImage]="stories.userImage" [userName]="stories.userName" [status]="stories.status" (openStory)="StorySeen($event)"> </app-story-tik-tok>
+    </div>
+    <app-chat-tik-tok *ngFor="let chat of message" [userImage]="chat.userImage" [userName]="chat.userName" [message]="chat.message" [status]="chat.status" 
+    [fecham]="chat.fecha" [numMensajes]="chat.numMensajes" (abrirMensaje)="Mensaje($event)"></app-chat-tik-tok>
+    <router-outlet></router-outlet>

@@ -1,0 +1,9 @@
+
+<div class="w-20 justify-center items-center mt-2 ml-2"  (click)="onOpenStory()">
+    <img [src]="userImage" alt="Imagen del usuario" class="w-20 h-20 rounded-full bg-black border-blue-400 border-4" *ngIf="status == true">
+    <img [src]="userImage" alt="Imagen del usuario" class="w-20 h-20 rounded-full bg-black border-gray-300 border-4" *ngIf="status == false">
+
+    <div class="flex flex-col justify-center  w-2/3 mb-3 mt-1">
+        <span class="font-sans text-base text-center ml-4">{{ userName }}</span>
+    </div>
+</div>

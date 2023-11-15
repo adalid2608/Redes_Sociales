@@ -2,8 +2,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatTabChangeEvent, MatTabsModule } from '@angular/material/tabs';
 
 import { CommonModule } from '@angular/common';
-import { InstagramComponent } from 'src/app/modulos/instagram/paginas/instagram/instagram.component';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-menu',
@@ -15,6 +13,7 @@ import { Observable } from 'rxjs';
 export class MenuComponent {
   @Output() mostrarOcultarInstagram = new EventEmitter<any>();
   @Output() mostrarOcultarMessenger = new EventEmitter<any>();
+  @Output() mostrarOcultarTikTok = new EventEmitter<any>();
   @Output() mostrarOcultarWhatsApp = new EventEmitter<any>();
 
   constructor(){
@@ -27,6 +26,7 @@ export class MenuComponent {
       return
     }
     if(event.index == 2) {
+      this.mostrarOcultarTikTok.emit(false)
       return
     }
     if(event.index == 3){

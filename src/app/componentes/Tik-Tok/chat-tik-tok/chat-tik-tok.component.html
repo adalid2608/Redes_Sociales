@@ -1,0 +1,17 @@
+<div class="flex w-full items-center justify-center h-16" (click)="onOpenMessage()">
+    <div class="mx-4">
+      <img [src]="userImage" alt="Imagen del usuario" class="w-12 h-12 rounded-full bg-black">
+    </div>
+    <div class="flex flex-col justify-center  w-2/3">
+      <span class="font-sans text-base">{{ userName }}</span>
+      <div class=" flex">
+        <mat-icon class="opacity-25 text-[18px] mt-1">{{ status ? 'arrow_circle_up' : 'check_circle' }}</mat-icon>
+        <p class="font-sans text-md text-gray-500">{{ message }}</p>
+        <p class="text-xs mt-1.5 ml-2 text-gray-500">{{fecham}}</p>
+      </div>  
+    </div>
+    <div class="flex justify-center items-center w-10">
+      <mat-icon class="opacity-25" *ngIf="numMensajes == 0">photo_camera</mat-icon> 
+      <span class="w-5 h-5 bg-red-600 rounded-full text-md text-center text-white" *ngIf="numMensajes >=1 ">{{numMensajes}}</span>
+    </div>
+  </div>
